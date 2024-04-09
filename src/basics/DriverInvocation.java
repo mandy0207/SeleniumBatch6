@@ -35,8 +35,6 @@ public class DriverInvocation {
 		//command to quit browser
 		driver.quit();
 		
-		
-	
 	}
 
 }

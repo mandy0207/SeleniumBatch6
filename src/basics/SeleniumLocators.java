@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SeleniumLocators {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
@@ -18,7 +18,8 @@ public class SeleniumLocators {
 		 * 1. id
 		 * 2. name
 		 * 3. className
-		 * 4. 
+		 * 4. LinkText
+		 * 5. PartialLinkText
 		 * 
 		 */
 
@@ -26,9 +27,14 @@ public class SeleniumLocators {
 		driver.findElement(By.name("password")).sendKeys("secret_sauce");
 		driver.findElement(By.className("submit-button")).click();
 		
-		 WebElement hamburgerIcon = driver.findElement(By.id("react-burger-menu-btn"));
-		 hamburgerIcon.click();
-		
+		 driver.findElement(By.id("react-burger-menu-btn")).click();
+		 Thread.sleep(1000);
+		 driver.findElement(By.linkText("About")).click();
+		 driver.navigate().back();
+		 driver.findElement(By.id("react-burger-menu-btn")).click();
+		 Thread.sleep(1000);
+		 driver.findElement(By.partialLinkText("Logo")).click();
+	
 	}
 
 }

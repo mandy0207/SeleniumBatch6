@@ -2,6 +2,7 @@ package basics;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LearnXpath {
@@ -19,9 +20,8 @@ public class LearnXpath {
 		 * 2) //tagname
 		 * 3)  //tagname[@atrribute='value']/tagname
 		 * 4)  //parent/child[index]
-		 * 
-		 * 
-		 * 
+		 * 5) //*[contains(text(),'textValue')]  use with text 
+		 * 6)  //*[contains(@attribute,'subsetValue')]  eg. //*[contains(@id,'_EnteredQuantity')]
 		 * 
 		 */
 		
@@ -30,6 +30,14 @@ public class LearnXpath {
 		driver.findElement(By.xpath("//input[@name='Password']")).sendKeys("mypassword");
 		driver.findElement(By.xpath("//*[@class='buttons']/input[@value='Log in']")).click();
 		driver.findElement(By.xpath("//ul[@class='list']/li[4]/a")).click();
+		driver.findElement(By.xpath("//*[@class='product-title']//*[contains(text(),'Blue Jeans')]")).click();
+		
+		WebElement qtyBox = driver.findElement(By.xpath("//*[contains(@id,'_EnteredQuantity')]"));
+		qtyBox.clear();
+		qtyBox.sendKeys("27");
+		
+		driver.quit();
+		
 
 	}
 

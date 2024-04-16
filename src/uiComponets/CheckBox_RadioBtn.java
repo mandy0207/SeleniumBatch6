@@ -14,7 +14,9 @@ public class CheckBox_RadioBtn {
 		driver.manage().window().maximize();
 		driver.get("https://selenium.qabible.in/check-box-demo.php");
 		driver.findElement(By.xpath("//*[@id='gridCheck']")).click();
-		
+		/**
+		 * Use click to Handle CheckBox and radio buttons 
+		 */
 	
 		List<WebElement> checkBoxes = driver.findElements(By.xpath("//*[@class='check-box-list']"));
 		

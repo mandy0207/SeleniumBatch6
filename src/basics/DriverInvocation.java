@@ -33,7 +33,11 @@ public class DriverInvocation {
 		driver.navigate().forward();
 		
 		//command to quit browser
+		// closes entire browser.
 		driver.quit();
+		
+		//close current window
+		//driver.close();
 		
 	}
 

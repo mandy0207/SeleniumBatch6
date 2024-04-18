@@ -34,7 +34,6 @@ public class HandlingAlerts {
 		alert.sendKeys("Niteesha");
 		alert.accept();
 		Thread.sleep(2000);
-		
 		driver.quit();
 
 	}

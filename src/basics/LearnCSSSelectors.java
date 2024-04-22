@@ -14,7 +14,7 @@ public class LearnCSSSelectors {
 		/**
 		 * CSS Selectors
 		 *1.)  if you have a class = .className
-		 *2. if we have id = #id
+		 *2. if we have an id = #id
 		 *3. for any attribute = tagname[attribute='value'] or [attribute='value']
 		 *4. if multiple classes are there ,omit space and use . = className1.className2
 		 *5.  Parent child = parent child

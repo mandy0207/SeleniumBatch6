@@ -20,7 +20,6 @@ public class LearnWaits {
 		 * Implicit wait -> 
 		 * 1. global wait - applied to all elements
 		 * 2. will wait until given time units in implicit wait
-		 * 
 		 */
 		driver.get("https://selenium.qabible.in/dynamic-load.php");
 		

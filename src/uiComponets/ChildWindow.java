@@ -34,5 +34,9 @@ public class ChildWindow {
 		System.out.println("Parent window  Title :"+driver.getTitle());
 		driver.close();
 	}
+	
+	
+	
+
 
 }

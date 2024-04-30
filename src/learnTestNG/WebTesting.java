@@ -1,10 +1,6 @@
 package learnTestNG;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -28,7 +24,7 @@ public class WebTesting {
 		System.out.println("I am inside first web test");
 	}
 	
-	@Test(priority=0)
+	@Test(priority=0, groups="Regression")
 	public void secondWebTest() {
 		System.out.println("I am inside second web test");
 	}
@@ -49,16 +45,15 @@ public class WebTesting {
 	}
 	
 	
-	@BeforeMethod
-	public void beforeMethod() {
-		System.out.println("I am executing before every method");
-	}
-	
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("I am executing after every method");
-	}
-	
+//	@BeforeMethod
+//	public void beforeMethod() {
+//		System.out.println("I am executing before every method");
+//	}
+//	
+//	@AfterMethod
+//	public void afterMethod() {
+//		System.out.println("I am executing after every method");
+//	}
 
 
 }

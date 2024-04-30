@@ -14,7 +14,7 @@ public class MobileTesting {
 		System.out.println("I am in first Mobile Test");
 	}
 	
-	@Test
+	@Test(groups="Smoke")
 	public void secondMobileTest() {
 		System.out.println("I am in second Mobile Test");
 	}

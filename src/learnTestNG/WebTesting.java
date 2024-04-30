@@ -2,6 +2,8 @@ package learnTestNG;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class WebTesting {
@@ -20,8 +22,10 @@ public class WebTesting {
 	 */
 	
 	@Test
-	public void firstWebTest() {
+	@Parameters({"UserName", "Password"})
+	public void firstWebTest( @Optional String UserName,@Optional  String Password) {
 		System.out.println("I am inside first web test");
+		System.out.println(UserName + " : "+Password);
 	}
 	
 	@Test(priority=0, groups="Regression")

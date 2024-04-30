@@ -1,7 +1,9 @@
 package learnTestNG;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -17,6 +19,7 @@ public class WebTesting {
 	 * 6. AfterTest will execute once after all the test cases present inside a class.
 	 * 7. Before method will execute before every method (test case) present inside class
 	 * 8. After method will execute after every method(test case) present inside class
+	 * 9. Before class will execute first in a class level 
 	 * 
 	 */
 	
@@ -45,6 +48,7 @@ public class WebTesting {
 		System.out.println("I am executing oce after  all tests");
 	}
 	
+	
 	@BeforeMethod
 	public void beforeMethod() {
 		System.out.println("I am executing before every method");
@@ -55,11 +59,6 @@ public class WebTesting {
 		System.out.println("I am executing after every method");
 	}
 	
-	
 
-	
-
-	
-	
 
 }

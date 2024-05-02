@@ -1,5 +1,7 @@
 package assertions;
 
+import java.util.Arrays;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -31,14 +33,17 @@ public class LearnHardAssertion {
 		
 		Assert.assertTrue(true);
 		Assert.assertFalse(false);
+			
+		
+		String actualNames[]= {"Vineetha","Nitisha","Romy"};
+		String expectedNames[]= {"Nitisha", "Vineetha","Romy"};
+		
+		Arrays.sort(actualNames);
+		Arrays.sort(expectedNames);
+		Assert.assertEquals(actualNames,  expectedNames);
 		
 		
 		
-//		
-//		String actualNames[]= {"Vineetha","Nitisha","Romy"};
-//		String expectedNames[]= {"Vineetha","Nitisha","Romy"};
-//		
-//		Assert.assertEquals(actualNames,  expectedNames);
 		
 		
 	}

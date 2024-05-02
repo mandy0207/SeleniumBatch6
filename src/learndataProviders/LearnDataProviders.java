@@ -12,7 +12,7 @@ public class LearnDataProviders {
 		System.out.println(firstName +" : "+lastName);
 		
 	}
-	
+
 	@Test(dataProvider="getData2")
 	public void mytest(Integer firstVal , Integer secondVal) {
 		System.out.println("I am executing");
@@ -20,6 +20,7 @@ public class LearnDataProviders {
 		
 	}
 	
+
 	@DataProvider
 	public Integer[][] getData2() {
 		Integer[][] data = new Integer[2][2];
@@ -28,12 +29,11 @@ public class LearnDataProviders {
 		
 		data[1][0]= 78;
 		data[1][1]= 89;
-		
+	
 		return data;
 		
 	}
 	
-
 	@DataProvider
 	public String[][] getData() {
 		String[][] data = new String[3][2];
